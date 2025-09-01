@@ -1,0 +1,109 @@
+Create a smart gardening web application called "PlantCare AI" with the following specifications:
+
+## Project Structure
+Build a full-stack web application with:
+- Frontend: React.js with Tailwind CSS for styling
+- Backend: Node.js with Express.js
+- File upload handling: Multer middleware
+- Image processing: Sharp library for optimization
+
+## Core Features to Implement
+
+### 1. Image Upload & Analysis
+- Create a drag-and-drop image upload interface
+- Support JPG, PNG, and WEBP formats (max 5MB)
+- Integrate with Plant.id API (https://plant.id/) for plant identification and health analysis
+- Display loading animation during API processing
+- Show confidence scores for predictions
+
+### 2. Plant Health Dashboard
+- Display analysis results in clean, user-friendly cards
+- Show plant species identification with scientific name
+- List detected health issues with severity levels (Healthy, Minor Issues, Serious Problems)
+- Provide specific symptoms identified (leaf spots, wilting, discoloration, etc.)
+
+### 3. Treatment Recommendations
+- Generate detailed care instructions based on API results
+- Include specific treatment steps (watering, fertilizing, pruning)
+- Suggest organic and chemical treatment options
+- Display timeline for expected recovery
+
+### 4. Additional Features
+- Weather integration using OpenWeatherMap API for location-based care tips
+- Plant care calendar with reminders
+- History page to track previously analyzed plants
+- Search functionality for plant care database
+- Responsive design for mobile and desktop
+
+## API Integrations Required
+
+### Plant.id API
+- Endpoint: POST https://api.plant.id/v3/identification
+- Features: Plant identification, health assessment, disease detection
+- Include API key management in environment variables
+
+### OpenWeatherMap API (optional)
+- Current weather data for location-based care recommendations
+- 5-day forecast for watering schedule adjustments
+
+## Technical Requirements
+- Implement proper error handling for API failures
+- Add input validation for image uploads
+- Include loading states and progress indicators
+- Store analysis history in localStorage
+- Implement basic SEO with meta tags
+- Add favicon and proper app manifest
+
+## UI/UX Design
+- Modern, clean interface with nature-inspired color scheme
+- Intuitive navigation with clear call-to-action buttons
+- Mobile-first responsive design
+- Accessibility features (alt text, keyboard navigation)
+- Professional typography and consistent spacing
+
+## File Structure
+src/
+├── components/
+│ ├── ImageUpload.jsx
+│ ├── PlantAnalysis.jsx
+│ ├── TreatmentRecommendations.jsx
+│ ├── WeatherWidget.jsx
+│ └── PlantHistory.jsx
+├── pages/
+│ ├── Home.jsx
+│ ├── Analysis.jsx
+│ └── History.jsx
+├── services/
+│ ├── plantIdApi.js
+│ └── weatherApi.js
+├── utils/
+│ └── imageProcessing.js
+└── App.jsx
+
+text
+
+## Environment Variables Needed
+- PLANT_ID_API_KEY
+- OPENWEATHER_API_KEY
+- PORT (default 3000)
+
+## Styling Guidelines
+- Use Tailwind CSS utility classes
+- Implement dark/light mode toggle
+- Green and earth-tone color palette
+- Smooth transitions and hover effects
+- Card-based layout for content sections
+
+## Error Handling
+- Display user-friendly error messages
+- Implement retry mechanisms for failed API calls
+- Validate image file types and sizes
+- Handle network connectivity issues gracefully
+
+## Performance Optimizations
+- Compress uploaded images before sending to API
+- Implement lazy loading for plant history images
+- Cache API responses for previously analyzed plants
+- Optimize bundle size with code splitting
+
+Please create all necessary files, implement the complete functionality, and ensure the app is production-ready with proper styling and user experience. Include sample data for testing and comprehensive README documentation.
